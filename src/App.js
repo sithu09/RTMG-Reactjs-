@@ -1,5 +1,6 @@
 import React from 'react';
 import COmponentToPrint from './COmponentToPrint';
+import MUnicipal from './MUnicipal';
 import {
   BrowserRouter as Router,
   Switch,
@@ -8,23 +9,21 @@ import {
 
 export default function App() {
   return (
-    <Router>
-   
-
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
-        <Switch>
-          <Route path="/">
-            <COmponentToPrint />
-          </Route>
-          {/* <Route path="/users">
-            <Users />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route> */}
+  
+      <Router>
+        {/* <Switch>
+        <Route path="/" component={COmponentToPrint} />
         </Switch>
-    </Router>
+        <Switch>
+        <Route path="/municipal" component={MUnicipal} />
+        </Switch> */}
+         <Switch>
+              <Route exact path='/' component={COmponentToPrint} />
+              <Route exact path='/contact' component={MUnicipal} />
+          </Switch>
+      </Router>
+    
+    
   );
 }
 
