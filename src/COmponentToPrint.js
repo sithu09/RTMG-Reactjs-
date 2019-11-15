@@ -30,16 +30,18 @@ export class COmponentToPrint extends Component {
     }
     render() {
         return (
-            <div>
+            <div className="background">
                
                {this.state.words.map((word)=>{
                    return(
-                                     <div className="To"> 
-                                         <p className="name" >{word.title}</p>
-                                         <p className="name" >{word.proposal}</p>
-                                         <p className="name" >{word.provide}</p>
-                                         <p className="name" >{word.date}</p>
-                                    </div> 
+                    <div >
+                                     <div> 
+                                         <p className="title">{word.title}</p>
+                                         <p className="report"><b>အကြောင်းအရာ - </b>{word.proposal}</p>
+                                         <p  className="report"><b>သက်သေ link - </b>{word.provide}</p>
+                                         <p  className="report"><b>နေ့စွဲ - </b>{word.date}</p>
+                                         </div> 
+                                    </div>
                    )
                })}
         

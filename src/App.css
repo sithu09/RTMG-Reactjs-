@@ -1,8 +1,18 @@
-.To{
-background: #83928f;
+.title{
+background: #9370DB;
 margin-left: 20%;
 margin-right: 20%;
 text-align: center;
-border-radius: 25px;
 
+}
+.report{
+margin-left: 20%;
+margin-right: 20%;
+}
+
+.background{
+    background: #E6E6FA;
+    margin-top: 50px;
+    height: 100%; 
+    width: 100%;
 }
