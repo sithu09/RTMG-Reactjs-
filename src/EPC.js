@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import * as firebase from 'firebase'
 import './App.css'
 
-export class MUnicipal extends Component {
+export class EPC extends Component {
     constructor(props) {
         super(props)
       
@@ -11,7 +11,7 @@ export class MUnicipal extends Component {
         }
       }
       componentDidMount(){
-          const wordRef=firebase.database().ref("MunicipalInsert");
+          const wordRef=firebase.database().ref("EPCInsert");
           wordRef.on('value',(snapshot)=>{
               let words=snapshot.val();
               let newstate=[];
@@ -34,14 +34,14 @@ export class MUnicipal extends Component {
                  
                  {this.state.words.map((word)=>{
                      return(
-                        <div >
-                        <div> 
-                            <p className="title">{word.title}</p>
-                            <p className="report"><b>အကြောင်းအရာ - </b>{word.proposal}</p>
-                            <p  className="report"><b>သက်သေ link - </b>{word.provide}</p>
-                            <p  className="report"><b>နေ့စွဲ - </b>{word.date}</p>
-                            </div> 
-                       </div>
+                      <div >
+                                       <div> 
+                                           <p className="title">{word.title}</p>
+                                           <p className="report"><b>အကြောင်းအရာ - </b>{word.proposal}</p>
+                                           <p  className="report"><b>သက်သေ link - </b>{word.provide}</p>
+                                           <p  className="report"><b>နေ့စွဲ - </b>{word.date}</p>
+                                           </div> 
+                                      </div>
                      )
                  })}
           
@@ -50,4 +50,5 @@ export class MUnicipal extends Component {
       }
   }
 
-export default MUnicipal
+export default EPC
+

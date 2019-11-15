@@ -1,6 +1,8 @@
 import React from 'react';
 import COmponentToPrint from './COmponentToPrint';
 import MUnicipal from './MUnicipal';
+import EPC from './EPC';
+import GHospital from './GHospital';
 import {
   BrowserRouter as Router,
   Switch,
@@ -14,6 +16,8 @@ export default function App() {
          <Switch>
               <Route exact path='/' component={COmponentToPrint} />
               <Route exact path='/municipal' component={MUnicipal} />
+              <Route exact path='/epc' component={EPC} />
+              <Route exact path='/ghospital' component={GHospital} />
           </Switch>
       </Router>
     
